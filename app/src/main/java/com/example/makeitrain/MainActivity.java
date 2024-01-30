@@ -27,10 +27,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         moneyValue = findViewById(R.id.moneyValue);
 
-
-
-
-
     }
 
     public void showMoney(View view) {
@@ -40,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         moneyValue.setText(String.valueOf(numberFormat.format(moneyCounter)));
 
         switch (moneyCounter) {
+            case 10000:
+                moneyValue.setTextColor(Color.GREEN);
+                break;
             case 20000:
                 moneyValue.setTextColor(ContextCompat.getColor(MainActivity.this,
                         R.color.purple_700));
